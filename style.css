@@ -69,6 +69,7 @@ body{
 .play-board .details .players{
     display: flex;
     width: 100%;
+    position: relative;
     justify-content: space-between;
 }
 .play-board .details span{
@@ -80,10 +81,21 @@ body{
     font-weight: 500;
     cursor: default;
     text-align: center;
+    position: relative;
+    z-index: 5;
 }
-.details span.active{
+.details span:first-child{
     color: #fff;
+}
+.details .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
     background: #56baed;
+    border-radius: 5px;
+    z-index: 2;
 }
 .play-board .play-area{
     margin-top: 20px;
